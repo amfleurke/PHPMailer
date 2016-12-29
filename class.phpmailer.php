@@ -3427,7 +3427,7 @@ class PHPMailer
                         $directory .= '/';
                     }
                     if ($this->addEmbeddedImage(
-                        $basedir . $directory . $filename,
+                        rawurldecode($basedir . $directory . $filename),
                         $cid,
                         $filename,
                         'base64',
